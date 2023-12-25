@@ -11,12 +11,12 @@ const URL_CONTAINER_FILE_NAME = 'urls.txt';
  * VIEW_DURATION - Max duration of a single view in seconds. Actual view duration will be +/- 16.6% of this number.
  * PAGE_DEFAULT_TIMEOUT - Max duration in seconds to wait for any action in the page.
  */
-const START_PORT = 9052;
-const BATCH_COUNT = IS_PROD ? 6 : 1;
-const TOTAL_COUNT = 96;
-const VIEW_ACTION_COUNT = 10;
-const VIEW_DURATION = 50;
-const PAGE_DEFAULT_TIMEOUT = 600;
+const START_PORT = 9052;              /* 9052 is the default port for TOR SOCKS proxy */
+const BATCH_COUNT = IS_PROD ? 6 : 1;  /* 6 parallel instances in production */
+const TOTAL_COUNT = 96;               /* 16 hours of viewing */
+const VIEW_ACTION_COUNT = 10;         /* 10 videos per view action */
+const VIEW_DURATION = 300;            /* 5 minutes */
+const PAGE_DEFAULT_TIMEOUT = 600;     /* 10 minutes */
 
 module.exports = {
   IS_PROD,
